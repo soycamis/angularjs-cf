@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>angularjs-cf</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+  <script src="js/http2.js"></script>
+</head>
+<body>
+
+  <div ng-controller="peticionget">
+    <p>{{ hola }}</p>
+    <p>
+      <button type="button" name="button" ng-click="get()">obtener datos</button>
+    </p>
+    <hr>
+    <ul>
+      <li ng-repeat="post in posts">
+        {{ post.title}}
+      </li>
+    </ul>
+  </div>
+
+  <div ng-controller="post">
+
+    <p>titulo</p>
+    <input type="text" ng-model="agregarTitulo.title">
+    <p>body</p>
+    <input type="text" ng-model="agregarTitulo.body">
+    <p><button type="button" name="button" ng-click="post()">agregar</button></p>
+    <p>lista de nuevos titulos!</p>
+    <ul>
+      <li ng-repeat="n in nuevos">
+        {{ n.title }}
+      </li>
+    </ul>
+  </div>
+
+
+</body>
+</html>
